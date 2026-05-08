@@ -1,20 +1,47 @@
 
-# Calculadora Generica
+# Calculadora Genérica
 
-## Descripcion
-Sistema enfocado en calcular una lista de numeros de manera generica, el usuario ingresa cualquier tipo de numero (entero, decimal o flotante),
-y se guardan dentro de una lista para mas adelantes usarlas en operaciones de suma, resta, multiplicacion o division.
+## 📌 Descripción
+Aplicación de consola desarrollada en **C#** que permite al usuario ingresar una lista de números de manera genérica (**enteros, decimales o flotantes**) para posteriormente realizar diferentes operaciones matemáticas.
 
-El proyecot esta desarrollado con un enfoque modular, sus partes las describimos de la siguiente manera:
+Los valores ingresados se almacenan en una lista y luego pueden utilizarse en las siguientes operaciones:
 
-## Estructura
+- ➕ Suma
+- ➖ Resta
+- ✖️ Multiplicación
+- ➗ División
 
-### UI: Aqui estan las clases que contienen los menus de navegacion que interactuara el cliente.
-- MenuOperacion: Consiste en metodo que le muestra al usuario las opciones que hay para calcular con los numeros.
-- MostrarMenu: Es el menu principal, el usuario eligira el tipo de dato que usara.
+---
 
-### Services: Estos son los metodos que usaran los datos.
-- IngresarValores: Metodo generico que permite al usuario ingresar los numeros a usar.
-- RealizarOperaciones: Metodo generico que usa los valores que ingresamos, consiste de un delegado que recibe la operacion y los valores
-y el metodo que lo calcula.
+# Estructura del Proyecto
+El proyecto fue desarrollado utilizando un enfoque modular para mantener una estructura organizada, reutilizable y fácil de mantener.
 
+## 📂 UI
+Contiene las clases encargadas de interactuar con el usuario mediante los menús de navegación.
+
+### `MenuOperacion`
+Muestra al usuario las operaciones matemáticas disponibles para realizar con los números ingresados.
+
+### `MostrarMenu`
+Es el menú principal donde el usuario selecciona el tipo de dato que desea utilizar.
+
+---
+
+## ⚙️ Services
+Contiene la lógica principal del sistema.
+
+### `IngresarValores`
+Método genérico encargado de recibir y almacenar los números ingresados por el usuario.
+
+### `RealizarOperaciones`
+Método genérico que utiliza los valores almacenados para ejecutar operaciones matemáticas mediante el uso de delegados y expresiones lambda.
+
+---
+
+# 🛡️ Manejo de Excepciones
+
+El sistema incluye validaciones para evitar errores durante la ejecución:
+
+- Validación de formatos inválidos al ingresar datos.
+- Manejo de división entre cero.
+- Validación de opciones incorrectas dentro del menú.
